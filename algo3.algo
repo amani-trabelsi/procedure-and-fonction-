@@ -1,0 +1,47 @@
+
+PROCEDURE orthogonal (var v1,v2:array)
+VAR
+     v1,v1: ARRAY_OF INTEGER [3];
+    i:integer;
+    sp:integer:=0;
+BEGIN
+    REPEAT
+FOR i FROM 0 TO  2 step 1 DO
+
+        read(v2[i]);
+    read(v2[i]);
+    dp:= dp + (v1[i]*v2[i]);
+END_FOR
+UNTIL (dp=0)
+
+write(v1,v2 "are orthogonal and the dot product is equal to ",0);
+
+END
+FUNCTION orthogonal(var v1,v2:array) : INTEGER
+VAR
+    dp,i:integer;
+    
+BEGIN
+
+REPEAT
+FOR i FROM 0 TO  2 step 1 DO
+
+        read(v2[i]);
+    read(v2[i]);
+    dp:= dp + (v1[i]*v2[i]);
+END_FOR
+UNTIL (dp=0)
+    RETURN dp ;
+END
+
+ALGORITHM dot product 
+VAR
+   u,v: ARRAY_OF INTEGER[3];
+    dp:integer:=0;
+    res:=integer;
+
+
+BEGIN
+orthogonal (u,v);
+res:= orthogonal(u,v);
+END
